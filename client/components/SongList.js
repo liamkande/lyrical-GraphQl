@@ -3,6 +3,7 @@ import ggl from "graphql-tag";
 import { graphql } from "react-apollo";
 import { Link } from "react-router";
 import query from "../queries/fetchSongs";
+import "../style/style.css";
 
 class SongList extends Component {
     constructor(props) {
