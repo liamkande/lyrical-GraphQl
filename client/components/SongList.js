@@ -1,6 +1,7 @@
 import React from "react";
 import ggl from "graphql-tag";
 import { graphql } from "react-apollo";
+import {Link} from "react-router";
 
 const SongList = (props) => {
     const { data } = props;
@@ -20,9 +21,18 @@ const SongList = (props) => {
     }
 
     return (
-        <ul className="collection">
-            {renderSongs()}
-        </ul>
+        <div>
+            <ul className="collection">
+                {renderSongs()}
+            </ul>
+            <Link
+                onlyActiveOnIndex={true}
+                to="/songs/new"
+                className="btn-floating btn-large red right"
+            >
+            <i className="material-icons">add</i>
+            </Link>
+        </div>
     );
 };
 
