@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ggl from "graphql-tag";
 import { graphql } from "react-apollo";
-import {hashHistory} from "react-router";
+import {hashHistory, Link} from "react-router";
 
 class SongCreate extends Component {
     constructor(props) {
@@ -20,6 +20,7 @@ class SongCreate extends Component {
     render() {
         return (
             <div>
+                <Link onlyActiveOnIndex={true} to="/">Back</Link>
                 <h3>Create a New Song</h3>
                 <form onSubmit={this.onsubmit.bind(this)}>
                     <label>Song Title:</label>
