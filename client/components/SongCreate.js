@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ggl from "graphql-tag";
 import { graphql } from "react-apollo";
+import {hashHistory} from "react-router";
 
 class SongCreate extends Component {
     constructor(props) {
@@ -12,7 +13,8 @@ class SongCreate extends Component {
         e.preventDefault();
         this.props.mutate({
             variables: { title: this.state.title }
-        });
+        }).then(() => hashHistory.push("/") );
+
         this.setState({ title: "" });
     }
     render() {
