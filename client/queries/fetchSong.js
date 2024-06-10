@@ -8,6 +8,7 @@ export default ggl`
             lyrics {
                 id
                 content
+                likes
             }
         }
     }
