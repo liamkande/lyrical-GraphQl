@@ -22,7 +22,7 @@ class SongCreate extends Component {
     render() {
         return (
             <div>
-                <Link onlyActiveOnIndex={true} to="/">Back</Link>
+                <Link onlyActiveOnIndex to="/">Back</Link>
                 <h3>Create a New Song</h3>
                 <form onSubmit={this.onsubmit.bind(this)}>
                     <label>Song Title:</label>

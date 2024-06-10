@@ -26,7 +26,7 @@ class SongList extends Component {
         return data.songs.map(({ id, title }) => {
             return (
                 <li key={id} className="collection-item">
-                    {title}
+                    <Link to={`/songs/${id}`} onlyActiveOnIndex> {title} </Link>
                     <i className="material-icons" onClick={() => this.onSongDelete(id)}>
                         delete
                     </i>
@@ -40,7 +40,7 @@ class SongList extends Component {
             <div>
                 <ul className="collection">{this.renderSongs()}</ul>
                 <Link
-                    onlyActiveOnIndex={true}
+                    onlyActiveOnIndex
                     to="/songs/new"
                     className="btn-floating btn-large red right"
                 >
