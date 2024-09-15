@@ -8,7 +8,9 @@
     "url": "https://github.com/liamkande/lyrical-GraphQl.git"
   },
   "scripts": {
-    "dev": "nodemon index.js --ignore client"
+    "dev": "nodemon index.js --ignore client",
+    "build": "webpack --config webpack.config.js",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",

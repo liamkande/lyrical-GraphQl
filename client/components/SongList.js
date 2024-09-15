@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import ggl from "graphql-tag";
-import { graphql } from "react-apollo";
-import { Link } from "react-router";
+import {graphql} from "react-apollo";
+import {Link} from "react-router";
 import query from "../queries/fetchSongs";
 import "../style/style.css";
 
@@ -15,15 +15,15 @@ class SongList extends Component {
 
     onSongDelete(id) {
         this.props
-            .mutate({ variables: { id } })
+            .mutate({variables: {id}})
             .then(() => this.props.data.refetch());
     }
 
     renderSongs() {
-        const { data } = this.props;
+        const {data} = this.props;
         if (!data.songs) return null;
 
-        return data.songs.map(({ id, title }) => {
+        return data.songs.map(({id, title}) => {
             return (
                 <li key={id} className="collection-item">
                     <Link to={`/songs/${id}`} onlyActiveOnIndex> {title} </Link>
@@ -38,6 +38,7 @@ class SongList extends Component {
     render() {
         return (
             <div>
+                <h3>Song List</h3>
                 <ul className="collection">{this.renderSongs()}</ul>
                 <Link
                     onlyActiveOnIndex
