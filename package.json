@@ -12,7 +12,7 @@
     "build": "webpack --config webpack.config.js",
     "start": "node index.js"
   },
-  "author": "",
+  "author": "Liam Ansoumane Kande",
   "license": "ISC",
   "dependencies": {
     "apollo-client": "^0.8.1",
